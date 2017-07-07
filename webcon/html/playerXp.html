@@ -1,0 +1,42 @@
+
+<div ng-controller="PlayerXpController" id="PlayerXpController">
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				Statistics for player: <a href="#/{{address}}/player/{{userid}}/">{{userid}}</a>
+			</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3>IP Address</h3>
+			<h5>Where has this user has connected from</h5>
+			<div class="panel">
+				<nvd3 options="Sources.Options" data="Sources.Data"></nvd3>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Other Steam Accounts with matching IP</h3>
+			<h5>Other users that share the ip</h5>
+			<div class="panel">
+				<nvd3 flex options="Outgoings.Options" data="Outgoings.Data"></nvd3>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+					<h3>Xp Over Time</h3>
+					<h5>How much XP has this user got over time</h5>
+			<div class="panel">
+				<nvd3 flex options="OverTime.Options" data="OverTime.Data"></nvd3>
+			</div>
+		</div>
+	</div>
+
+</div>
